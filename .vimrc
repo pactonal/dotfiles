@@ -26,7 +26,7 @@ let g:airline_theme = "wombat"
 let g:airline#extensions#hunks#enabled = 0
 let g:airline#extensions#branch#enabled = 1
 let g:AutoPairsUseInsertedCount = 1
-
+let g:airline_skip_empty_sections = 1
 
 set statusline+=%#warningmsg#
 set statusline+=%{SyntasticStatuslineFlag()}
