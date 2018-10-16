@@ -4,6 +4,12 @@
 # Path to your oh-my-zsh installation.
   export ZSH="/home/mitchell/.oh-my-zsh"
 
+export VIMRUNTIME=/usr/share/vim/vim81
+
+bindkey -v
+
+# Prompt half-line mark
+  PROMPT_EOL_MARK=" "
 # Set name of the theme to load --- if set to "random", it will
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
@@ -65,6 +71,7 @@ ZSH_THEME="agnoster"
 plugins=(
   git
   zsh-syntax-highlighting
+  vi-mode
 )
 
 source $ZSH/oh-my-zsh.sh
@@ -97,3 +104,9 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+alias ll='ls -alF'
+alias la='ls -A'
+alias l='ls -aF'
+alias streamlink-twitch-gui='/opt/streamlink-twitch-gui/streamlink-twitch-gui'
+alias st='speedtest-cli --bytes'
+alias clock='while true; do tput clear; date +"%H : %M : %S" | figlet ; sleep 1; done'
