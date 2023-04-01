@@ -1,0 +1,74 @@
+# i3status configuration file.
+# see "man i3status" for documentation.
+
+# It is important that this file is edited as UTF-8.
+# The following line should contain a sharp s:
+# ß
+# If the above line is not correctly displayed, fix your editor first!
+
+general {
+        colors = true
+        color_good = "#c3e88d"
+        color_bad = "#f07178"
+        color_degraded = "#ffcb6b"
+        color_separator = "#a6accd"
+        interval = 1
+        output_format = "i3bar"
+}
+
+order += "ethernet enp4s0"
+order += "disk /"
+order += "cpu_usage"
+order += "cpu_temperature 0"
+order += "cpu_temperature 1"
+order += "read_file fan1_input"
+order += "memory"
+order += "tztime local"
+
+
+ethernet enp4s0 {
+        format_up = "%ip (%speed)"
+        format_down = "down"
+}
+
+
+disk "/" {
+        format = "%avail"
+}
+
+cpu_usage {
+        format = "%usage"
+        max_threshold = "75"
+        format_above_threshold = "%usage"
+        degraded_threshold = "50"
+        format_above_degraded_threshold = "%usage"
+}
+
+cpu_temperature 0 {
+        format = "%degrees °C"
+        max_threshold = "90"
+        format_above_threshold = "%degrees °C"
+        path = "/sys/devices/pci0000:00/0000:00:18.3/hwmon/hwmon*/temp1_input"
+}
+
+cpu_temperature 1 {
+        format = "%degrees °C"
+        max_threshold = "80"
+        format_above_threshold = "%degrees °C"
+        path = "/sys/devices/pci0000:00/0000:00:03.1/0000:05:00.0/0000:06:00.0/0000:07:00.0/hwmon/hwmon*/temp2_input"
+
+}
+
+read_file fan1_input {
+        path = "/sys/devices/pci0000:00/0000:00:03.1/0000:05:00.0/0000:06:00.0/0000:07:00.0/hwmon/hwmon2/fan1_input"
+}
+memory {
+        format = "%used/%total"
+        threshold_degraded = "10%"
+        threshold_critical = "5%"
+        format_degraded = "%free"
+}
+
+tztime local {
+        format = "%m-%d-%Y %H:%M:%S"
+}

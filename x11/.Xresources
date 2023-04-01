@@ -1,0 +1,38 @@
+URxvt*depth: 32
+URxvt*geometry: 100x24
+
+URxvt.foreground: #a6accd
+URxvt.background: [80]#292d3e
+URxvt.cursorColor: #a6accd
+
+! black
+URxvt.color0: #292d3e
+URxvt.color8: #676e95
+! red
+URxvt.color1: #f07178
+URxvt.color9: #f07178
+! green
+URxvt.color2:  #c3e88d
+URxvt.color10: #c3e88d
+! yellow
+URxvt.color3:  #ffcb6b
+URxvt.color11: #ffcb6b
+! blue
+URxvt.color4:  #82aaff
+URxvt.color12: #82aaff
+! magenta
+URxvt.color5:  #c792ea
+URxvt.color13: #c792ea
+! cyan
+URxvt.color6:  #89ddff
+URxvt.color14: #89ddff
+! white
+URxvt.color7:  #eeffff
+URxvt.color15: #cccccc 
+
+URxvt.scrollBar: false
+URxvt.font: xft:ProggyCleanTTSZ:size=12:antialias=false
+URxvt.imFont: xft:ProggyCleanTTSZ:size=12:antialias=false
+URxvt.boldFont: xft:ProggyCleanTTSZ:size=12:antialias=false
+URxvt.italicFont: xft:ProggyCleanTTSZ:size=12:antialias=false
+URxvt.boldItalicFont: xft:ProggyCleanTTSZ:size=12:antialias=false
